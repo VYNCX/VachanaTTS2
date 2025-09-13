@@ -5,7 +5,7 @@ import wave
 
 def load_voice(voice_name="TH_F_1"):
     try:
-        voice = Voice.load("model/TH_F_1.onnx")    
+        voice = Voice.load(f"model/{voice_name}.onnx")    
     except:
 
         from huggingface_hub import hf_hub_download
@@ -39,5 +39,6 @@ def generate_speech(
     voice = load_voice(voice)
     with wave.open(output, "wb") as wav_file:
         voice.synthesize_wav(text, wav_file, syn_config)
+
 
     return "Speech Generated"
