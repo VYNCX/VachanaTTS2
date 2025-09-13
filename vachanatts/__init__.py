@@ -13,8 +13,8 @@ def load_voice(voice_name="TH_F_1"):
         model_filename = f"voices/{voice_name}.onnx"
         config_filename = f"voices/{voice_name}.onnx.json"
 
-        model_path = hf_hub_download(repo_id="VIZINZTOR/VachanaTTS", filename=model_filename,cache_dir="./model")
-        config_path = hf_hub_download(repo_id="VIZINZTOR/VachanaTTS", filename=config_filename,cache_dir="./model")
+        model_path = hf_hub_download(repo_id="VIZINTZOR/VachanaTTS", filename=model_filename,cache_dir="./model")
+        config_path = hf_hub_download(repo_id="VIZINTZOR/VachanaTTS", filename=config_filename,cache_dir="./model")
         voice = Voice.load(model_path, config_path)
 
     return voice
@@ -42,5 +42,6 @@ def generate_speech(
 
 
     return "Speech Generated"
+
 
 
