@@ -2,7 +2,6 @@ from .config import SpeechConfig
 from .voice import Voice
 import wave
 
-
 def load_voice(voice_name="TH_F_1"):
     try:
         voice = Voice.load(f"model/{voice_name}.onnx")    
@@ -42,6 +41,7 @@ def generate_speech(
 
 
     return "Speech Generated"
+
 
 
 
